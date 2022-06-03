@@ -23,24 +23,47 @@
 
 // Module pattern before ES6
 
-const shoppingCart = (function () {
-  const cart = [];
-  const totalPrice = 237;
-  const totalQuantity = 23;
-  const shippingCost = 10;
+// const shoppingCart = (function () {
+//   const cart = [];
+//   const totalPrice = 237;
+//   const totalQuantity = 23;
+//   const shippingCost = 10;
 
-  const addToCart = function (product, quantity) {
-    cart.push({ quantity, product });
-    console.log(`${quantity} ${product}s have been added to cart`);
-  };
+//   const addToCart = function (product, quantity) {
+//     cart.push({ quantity, product });
+//     console.log(`${quantity} ${product}s have been added to cart`);
+//   };
 
-  const orderStock = function (product, quantity) {
-    cart.push({ quantity, product });
-    console.log(`${quantity} ${product}s have been ordered`);
-  };
+//   const orderStock = function (product, quantity) {
+//     cart.push({ quantity, product });
+//     console.log(`${quantity} ${product}s have been ordered`);
+//   };
 
-  return { cart, totalPrice, totalQuantity, shippingCost, addToCart };
-})();
+//   return { cart, totalPrice, totalQuantity, shippingCost, addToCart };
+// })();
 
-shoppingCart.addToCart("bread", 5);
-console.log(shoppingCart.cart);
+// shoppingCart.addToCart("bread", 5);
+// console.log(shoppingCart.cart);
+
+//  clone of objects
+import cloneDeep from "./node_modules/lodash-es/cloneDeep.js";
+
+const state = {
+  cart: [
+    { product: "bread", quantity: 4 },
+    { product: "pizza", quantity: 5 },
+  ],
+
+  user: { loggedIn: true },
+};
+
+// shallow clone
+const stateClone = Object.assign({}, state);
+const stateDeepClone = cloneDeep(state);
+
+state.user.loggedIn = false; //update the oringial
+
+console.log(stateClone); //The value of the clone changes
+console.log(stateDeepClone); //The value of the deep clone remains the same
+
+//Using lodash to create deep clones
