@@ -6,9 +6,9 @@
 
 // // Named imports
 
-// // import { addToCart } from "./shoppingCart.js";
+import { addToCart } from "./shoppingCart.js";
 
-// // addToCart("beer", 5);
+addToCart("beer", 5);
 
 // // Default import
 // import add from "./shoppingCart.js"; //we can give it any name
@@ -46,7 +46,11 @@
 // console.log(shoppingCart.cart);
 
 //  clone of objects
-import cloneDeep from "./node_modules/lodash-es/cloneDeep.js";
+// import cloneDeep from "./node_modules/lodash-es/cloneDeep.js";
+
+//importing es6 modules with help from parcel
+import cloneDeep from "lodash-es";
+console.log("e");
 
 const state = {
   cart: [
@@ -59,6 +63,7 @@ const state = {
 
 // shallow clone
 const stateClone = Object.assign({}, state);
+//Using lodash to create deep clones
 const stateDeepClone = cloneDeep(state);
 
 state.user.loggedIn = false; //update the oringial
@@ -66,4 +71,7 @@ state.user.loggedIn = false; //update the oringial
 console.log(stateClone); //The value of the clone changes
 console.log(stateDeepClone); //The value of the deep clone remains the same
 
-//Using lodash to create deep clones
+// Introducing hot module replacement with parcel
+if (module.hot) {
+  module.hot.accept();
+}

@@ -2,8 +2,7 @@
   "name": "modern-js-development",
   "version": "1.0.0",
   "description": "",
-"type": "module",
-  
+  "type": "module",
   "main": "script.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -20,5 +19,8 @@
   "homepage": "https://github.com/davidkiama/Modern-Js-Development#readme",
   "dependencies": {
     "lodash-es": "^4.17.21"
+  },
+  "devDependencies": {
+    "parcel": "^2.6.0"
   }
 }
