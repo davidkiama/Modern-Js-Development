@@ -50,7 +50,6 @@ addToCart("beer", 5);
 
 //importing es6 modules with help from parcel
 import cloneDeep from "lodash-es";
-console.log("e");
 
 const state = {
   cart: [

@@ -542,7 +542,6 @@ var _shoppingCartJs = require("./shoppingCart.js");
 var _lodashEs = require("lodash-es");
 var _lodashEsDefault = parcelHelpers.interopDefault(_lodashEs);
 (0, _shoppingCartJs.addToCart)("beer", 5);
-console.log("e");
 const state = {
     cart: [
         {
