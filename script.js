@@ -74,3 +74,10 @@ console.log(stateDeepClone); //The value of the deep clone remains the same
 if (module.hot) {
   module.hot.accept();
 }
+
+console.log("kiama" ?? null);
+
+Promise.resolve("THEN").then((x) => console.log(x));
+
+//Polifilling
+import "core-js/stable";

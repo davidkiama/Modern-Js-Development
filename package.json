@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/davidkiama/Modern-Js-Development#readme",
   "dependencies": {
+    "core-js": "^3.22.8",
     "lodash-es": "^4.17.21"
   },
   "devDependencies": {
